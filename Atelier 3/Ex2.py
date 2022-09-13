@@ -102,6 +102,11 @@ def liste_mot(lst_mot : list,pre : str,suff : str,n : int):
 
 
 def dictionnaire(fichier):
+    """ouvre un fichier passé en paramètre et le lit ligne à ligne
+
+    Args:
+        fichier (_type_): un fichier texte
+    """
     f = open(fichier)
     c = f.readline()
     print("**LISTE DE MOTS**")
