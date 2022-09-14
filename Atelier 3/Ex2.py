@@ -4,6 +4,14 @@ MOT = ["pédiluve","australopithèque","peripeptide","salvateur","mastication","
 
 
 def mot_nlettre(lst : list,n : int) -> list:
+    """renvoie les mots d'une liste ayant n lettres
+    Args:
+        lst (list): une liste de mots
+        n (int): le nom bre de lettres du mot
+
+    Returns:
+        list: une liste de mot de longueur n 
+    """
     lst_n = []
     for e in lst:
         if len(e) == n:
@@ -114,6 +122,7 @@ def dictionnaire(fichier):
         print(c)
         c = f.readline()
     print("**FINI**")
+    f.close()
 
 dictionnaire("littre.txt")
 

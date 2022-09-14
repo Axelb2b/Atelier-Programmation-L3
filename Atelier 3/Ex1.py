@@ -56,7 +56,7 @@ def is_mail(mail : str) -> tuple:
 
 
 print(is_mail("brunelaxel@univ-corse.fr"))
-print(is_mail("brune/axel@gmail.com"))
+print(is_mail("brune./\%axel@gmail.com"))
 print(is_mail("brunelaxel.com"))
 print(is_mail("brunelaxel@Gmailcom"))
 print(is_mail("brunelaxel@gmail.co/m"))
