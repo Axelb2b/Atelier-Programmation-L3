@@ -7,7 +7,7 @@ def fermante(car:str) -> bool:
     return car in CAS
 
 def reverse(car : str) -> str:
-    CAS = ["(","{","["," ",]
+    CAS = ["(","{","["," "]
     if fermante(car):
         if car == ")":
             return "("
@@ -20,4 +20,4 @@ def reverse(car : str) -> str:
     else:
         return ""
 
-print(reverse(" "))
+#Je reprendrais cet exercice plus tard . 
