@@ -1,5 +1,5 @@
 M = [1,2,2,3,4,5,5]
-L = [1,2,1,3,4,3,2]
+L = [1,3,4,0,0,2,5,5]
 
 
 #FOnction de l'exercice d'avant qui va bien servir
@@ -13,9 +13,8 @@ def histo(F : list) -> list:
         list: Une liste de longeur max[F]+1 avec pour chaque elements le nombre d'occurence de l'indice de cet element dans F 
         ex : H = [1,0,2] -> Max[F] = 2 , il y a un 0 , aucun 1 et deux 2 dans F.
         """
-    H = []
-    for i in range(max(F)+1):
-        H.append(0)
+    H = [0]*len(max(F)+1)
+
     for i in range(len(F)):
         a = F[i]
         H[a] += 1
@@ -33,11 +32,7 @@ def agencement(nb_emplacement : int,l_objet : list) -> tuple:
     Returns:
         tuple: tuple solution
     """
-    #Vérification du nombre d'objet
-    hist = histo(l_objet)
-    for e in hist:
-        if e >= 3 :
-            return ("Trop d'éléments","pas de solutions")
+    
 
 
     L1 = []
