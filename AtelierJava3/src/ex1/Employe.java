@@ -1,0 +1,61 @@
+package ex1;
+import java.util.*;
+
+public class Employe extends Personne {
+	protected double salaire;
+	protected final GregorianCalendar DATEEMBAUCHE = new GregorianCalendar();
+	protected static final int AGEMIN = 16;
+	protected static final int AGEMAX = 65;
+	
+	
+	//Constructeurs
+	public Employe(String leNom,String lePrenom, GregorianCalendar laDate, Adresse lAdresse,double salaire) {
+		super(leNom,lePrenom,laDate,lAdresse);
+		this.salaire = salaire;
+		
+	}
+	
+	public Employe(String leNom,String lePrenom, int j, int m, int a, int numero, String rue, String code_postal, String ville,double salaire) {
+		super(leNom, lePrenom, new GregorianCalendar(a,m,j),new Adresse(numero,rue,code_postal,ville));
+		this.salaire = salaire;
+	}
+	
+	
+	
+		
+	
+	
+	
+	
+	
+	
+	//Augmente le salaire de aug%
+	public void augmenterSalaire(double aug) {
+		if(aug > 0) {
+			this.salaire = this.salaire*(aug/100)+this.salaire;
+		}
+	}
+	
+	public int calculAnnuite() {
+		GregorianCalendar date = new GregorianCalendar();
+		int annee = date.get(Calendar.YEAR);
+		int annee_embauche = this.DATEEMBAUCHE.get(Calendar.YEAR);
+		return annee-annee_embauche+1;
+		
+	}
+	
+	
+	
+	
+	
+
+	public String toString() {
+		return super.toString()+"\n"+"salaire : "+salaire+" date d'embauche : "+DATEEMBAUCHE.get(Calendar.DAY_OF_MONTH)+
+				"-"+DATEEMBAUCHE.get(Calendar.MONTH)+
+				"-"+DATEEMBAUCHE.get(Calendar.YEAR)+"\n";
+	}
+	
+	
+	
+
+}
