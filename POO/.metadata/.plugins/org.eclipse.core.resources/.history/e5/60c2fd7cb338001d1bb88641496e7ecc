@@ -1,0 +1,19 @@
+package ex1;
+
+
+
+public class ManipRobot {
+	public static void main(String[ ] args) {
+		
+		Robot2 toto = new Robot2("Toto",10,20,3);
+		Robot2 titi = new Robot2("Titi");
+		toto.avancer();
+		titi.setOrientation(3);
+		titi.avancer();
+		toto.getOrientation();
+		toto.getCoord();
+		titi.getCoord();
+	}
+}
+
+

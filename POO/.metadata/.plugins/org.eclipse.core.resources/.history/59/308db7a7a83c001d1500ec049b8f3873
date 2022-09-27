@@ -1,0 +1,17 @@
+package ex1;
+
+import java.util.GregorianCalendar;
+
+public class Manager extends Employe {
+	private Secretaire secretaire;
+	
+	
+	
+	
+	
+	
+	public void augmenterSalaire(double pourcentage) {
+		super.augmenterSalaire(pourcentage+(0.5*this.calculAnnuite()));
+	}
+
+}

@@ -1,0 +1,14 @@
+package ex1;
+
+public class TestPersonne {
+
+	public static void main(String[] args) {
+		Personne p1 = new Personne("Jean","III",02,10,1541,2,"riche","20200","Bastia");
+		Personne p2 = new Personne("Jean","Barlou",02,10,2000,2,"pauvre","20200","Bastia");
+		System.out.println(p1);
+		System.out.println(p2);
+		System.out.println(Personne.plusAgee(p1, p2));
+
+	}
+
+}

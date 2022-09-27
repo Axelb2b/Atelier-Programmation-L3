@@ -1,0 +1,50 @@
+package ex1;
+import java.util.*;
+
+public class Employe extends Personne {
+	protected double salaire;
+	protected final GregorianCalendar DATEEMBAUCHE;
+	protected static final int AGEMIN = 16;
+	protected static final int AGEMAX = 65;
+	
+	
+	//Constructeurs
+	public Employe(String leNom,String lePrenom, GregorianCalendar laDate, Adresse lAdresse,double salaire) {
+		super(leNom,lePrenom,laDate,lAdresse);
+		this.salaire = salaire;
+		this.DATEEMBAUCHE = new GregorianCalendar();
+		
+	}
+	
+	public Employe(String leNom,String lePrenom, int j, int m, int a, int numero, String rue, String code_postal, String ville,double salaire) {
+		super(leNom, lePrenom, new GregorianCalendar(a,m,j),new Adresse(numero,rue,code_postal,ville));
+		this.salaire = salaire;
+		this.DATEEMBAUCHE = new GregorianCalendar();
+	}
+	
+	
+	
+		
+	
+	
+	
+	
+	
+	
+	//Augmente le salaire de aug%
+	public void augmenterSalaire(double aug) {
+		if(aug > 0) {
+			this.salaire = this.salaire*(aug/100);
+		}
+	}
+
+	public String toString() {
+		return super.toString()+"\n"+"salaire : "+salaire+" date d'embauche : "+DATEEMBAUCHE.get(Calendar.DAY_OF_MONTH)+
+				"-"+DATEEMBAUCHE.get(Calendar.MONTH)+
+				"-"+DATEEMBAUCHE.get(Calendar.YEAR)+"\n";
+	}
+	
+	
+	
+
+}

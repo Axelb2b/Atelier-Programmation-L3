@@ -1,0 +1,30 @@
+package ex1;
+
+import java.util.*;
+
+public class Manager extends Employe {
+	private Secretaire secretaire;
+	
+	
+	
+	
+	public Manager(String leNom,String lePrenom, GregorianCalendar laDate, Adresse lAdresse,double salaire,Secretaire secretaire) {
+		super(leNom,lePrenom,laDate,lAdresse,salaire);
+		this.secretaire = secretaire;
+		
+	}
+	
+	public void augmenterSalaire(double pourcentage) {
+		super.augmenterSalaire(pourcentage+(0.5*this.calculAnnuite()));
+	}
+	
+	
+	
+	//Assignation nouvelle secretaire
+	public void assignationSecretaire(Secretaire s) {
+		if(size(s.getManagers())< 5) {
+			
+		}
+	}
+
+}

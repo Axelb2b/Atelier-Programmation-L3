@@ -1,0 +1,8 @@
+package ex1;
+import java.util.*;
+
+public class Employe extends Personne {
+	protected double salaire;
+	protected final GregorianCalendar DATEEMBAUCHE;
+
+}

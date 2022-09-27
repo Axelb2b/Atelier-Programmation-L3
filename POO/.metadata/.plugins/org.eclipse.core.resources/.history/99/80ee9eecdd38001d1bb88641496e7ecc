@@ -1,0 +1,22 @@
+package ex2;
+import java.util.*;
+
+
+
+
+public class EntierFou extends Entier{
+	private int niveauDeFolie;
+	protected static Random r = new Random();
+	
+	
+	public EntierFou(int borneSup,int borneInf,int valeur,int niveauDeFolie) {
+		super(borneSup,borneInf,valeur);
+		this.niveauDeFolie = niveauDeFolie;
+	}
+	
+	//Overide des 
+	public void incrementer() {
+		super.incrementer(r.nextInt(this.niveauDeFolie+1));
+	}
+
+}

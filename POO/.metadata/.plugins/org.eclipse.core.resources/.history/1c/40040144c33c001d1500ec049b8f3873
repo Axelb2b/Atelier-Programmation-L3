@@ -1,0 +1,44 @@
+package ex1;
+
+import java.util.*;
+
+public class Manager extends Employe {
+	private Secretaire secretaire;
+	
+	
+	
+	
+	public Manager(String leNom,String lePrenom, int j, int m, int a, int numero, String rue, String code_postal, String ville,double salaire,Secretaire secretaire) {
+		super(leNom, lePrenom, new GregorianCalendar(a,m,j),new Adresse(numero,rue,code_postal,ville),salaire);
+		this.secretaire = secretaire;
+		secretaire.ajoutManager(this);
+		
+		
+	}
+	
+	public void augmenterSalaire(double pourcentage) {
+		super.augmenterSalaire(pourcentage+(0.5*this.calculAnnuite()));
+	}
+	
+	
+	
+	//Assignation nouvelle secretaire
+	public void assignationSecretaire(Secretaire s) {
+		if(s.getManagers().size()< 5) {
+			this.secretaire = s;
+			s.ajoutManager(this);
+		}else {
+			s.ajoutManager(this);
+		}
+	}
+
+	@Override
+	public String toString() {
+		return super.toString()+"[secretaire=" + secretaire + "]";
+	}
+	
+	
+	
+	
+
+}

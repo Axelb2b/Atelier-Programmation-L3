@@ -1,0 +1,14 @@
+package ex1;
+
+public class Manager {
+	private Secretaite secretaire;
+	
+	
+	
+	
+	
+public Manager(Secretaire secretaire) {
+	
+}
+
+}

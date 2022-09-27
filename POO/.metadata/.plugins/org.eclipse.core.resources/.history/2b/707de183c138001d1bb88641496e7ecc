@@ -1,0 +1,61 @@
+package ex1;
+import java.util.*;
+
+public class Des {
+	private String nom;
+	private int nbFaces;
+	private static Random r = new Random();
+	
+	
+	//Constructeurs
+	
+	public Des() {
+		this.nbFaces = 6;
+		this.nom = "De";
+	}
+	
+	public Des(int nbFaces,String nom) {
+		this.nom = nom;
+		this.nbFaces = nbFaces;
+	}
+	
+	public Des(String nom) {
+		this.nom = nom;
+		this.nbFaces = 6;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	//Get Set
+	public String getNom() {
+		return nom;
+	}
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+	public int getNbFaces() {
+		if (3 >= this.nbFaces && this.nbFaces <= 120) {
+			return this.nbFaces;
+		}else {
+			System.out.println("Nombre de face non valide , changez le avec setNbFaces()");
+			return 0;
+		}
+	}
+	public void setNbFaces(int nbFaces) {
+		this.nbFaces = nbFaces;
+	}
+	//
+	
+	
+	//Lancer de Dé
+	public int lancer() {
+		return r.nextInt(nbFaces+1);
+	}
+
+}

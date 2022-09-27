@@ -1,0 +1,8 @@
+INDEX VERSION 1.131+/Users/Axel/Desktop/CoursL3/POO/.metadata/.plugins/org.eclipse.jdt.core
+1865797976.index
+105890110.index
+2672201860.index
+3385852863.index
+3349229269.index
+3234654924.index
+3787740244.index

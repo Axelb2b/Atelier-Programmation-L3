@@ -1,0 +1,11 @@
+package ex1;
+
+public class DesPip extends Des {
+	private int valMin;
+	
+	public DesPip(int valMin,String nom,int nbFaces) {
+		super.Des(nbFaces,nom);
+		this.valMin = valmin;
+	}
+
+}

@@ -1,0 +1,91 @@
+package ex1;
+
+public class Robot2 {
+	private String ref;
+	private String nom;
+	private int x;
+	private int y;
+	private int orientation;
+	private static int totalR;
+	
+	
+	
+	
+	public Robot2(String nom,int x,int y,int orientation) {
+		this.nom = nom;
+		this.x = x;
+		this.y = y;
+		this.orientation = orientation;
+		totalR ++;
+		this.ref = "ROB"+totalR;
+		
+	}
+	
+	public Robot2(String nom) {
+		this.nom = nom;
+		this.x = 0;
+		this.y = 0;
+		this.orientation = 1;
+		totalR ++;
+		this.ref = "ROB"+totalR;
+	}
+	
+	
+	//Get Set
+		public String getRef() {
+			return ref;
+		}
+		public String getNom() {
+			return nom;
+		}
+		public String getCoord() {
+			return "coordonnées x : "+x+" et y : "+y;
+		}
+		public String getOrientation() {
+			return "l'orientation est"+orientation;
+			}
+		public static int getTotalR() {
+			return totalR;
+		}
+	
+	
+	
+	
+	
+	
+	
+	//Change l'orientation
+	public void setOrientation(int orientation) {
+		this.orientation = orientation;
+	}
+	
+	//Change les coordonnées
+	
+	public void avancer() {
+		if (orientation == 1) {
+			this.y = y+1;
+		}else if (orientation == 2) {
+			this.x = x+1;
+		}else if (orientation == 3) {
+			if (y > 0) {
+				this.y = y-1;
+			}else {
+				this.y = 0;
+				System.out.println("y = 0, impossible d'aller vers le sud");
+			}
+		}else if (orientation == 4) {
+			if (x > 0) {
+				this.x = x-1;
+			}else {
+				this.x = 0;
+				System.out.println("x = 0, impossible d'aller vers le nord");
+			}
+		}else {
+			System.out.println("Entrez une valeur comprise en 1 et 4 pour l'orientation (méthode modifOrientation)");
+		}
+	
+	}
+	
+	
+
+}

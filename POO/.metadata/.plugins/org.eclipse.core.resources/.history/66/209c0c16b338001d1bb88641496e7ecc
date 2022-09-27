@@ -1,0 +1,67 @@
+package ex1;
+
+public class Robot2 {
+	private String ref;
+	private String nom;
+	private int x;
+	private int y;
+	private int orientation;
+	private static int totalR;
+	
+	
+	
+	
+	public Robot2(String nom,int x,int y,int orientation) {
+		this.nom = nom;
+		this.x = x;
+		this.y = y;
+		this.orientation = orientation;
+		totalR ++;
+		this.ref = "ROB"+totalR;
+		
+	}
+	
+	public Robot2(String nom) {
+		this.nom = nom;
+		this.x = 0;
+		this.y = 0;
+		this.orientation = 1;
+		totalR ++;
+		this.ref = "ROB"+totalR;
+	}
+	
+	
+	//Change l'orientation
+	public void setOrientation(int orientation) {
+		this.orientation = orientation;
+	}
+	
+	//Change les coordonnées
+	
+	public void avancer() {
+		switch(this.orientation) {
+		case(1):
+			this.y ++;
+		case(2):
+			this.x ++;
+		case(3):
+			if(this.y == 0) {
+				System.out.println("Impossible d'aller vers le Sud");
+			}else {
+				this.y ++;
+			}
+		case(4):
+		if(this.x == 0) {
+			System.out.println("Impossible d'aller vers l'Ouest");
+		}
+		else {
+			System.out.println("Direction non valide");
+		}
+			
+	}
+	
+	}
+	
+	
+
+}

@@ -1,0 +1,48 @@
+package ex1;
+
+import java.util.*;
+
+
+public class Secretaire extends Employe {
+	private ArrayList<Manager> managers;
+	
+	
+	
+	
+	
+	
+	public Secretaire(String leNom,String lePrenom, GregorianCalendar laDate, Adresse lAdresse,double salaire,Manager manager) {
+		super(leNom,lePrenom,laDate,lAdresse,salaire);
+		this.managers = new ArrayList<Manager>();
+		this.managers.add(manager);
+		
+	}
+	
+	public Secretaire(String leNom,String lePrenom, GregorianCalendar laDate, Adresse lAdresse,double salaire) {
+		super(leNom,lePrenom,laDate,lAdresse,salaire);
+		this.managers = new ArrayList<Manager>();
+		
+	}
+
+
+
+
+
+
+	public ArrayList<Manager> getManagers() {
+		return managers;
+	}
+
+
+
+	public void ajoutManager(Manager m) {
+		if( this.managers.size()<5) {
+			this.managers.add(m);
+		}else {
+			System.err.println("Trop de managers assignés , impossible d'en ajouter");
+		}
+	}
+	
+	
+
+}

@@ -1,0 +1,11 @@
+package ex1;
+
+public class TestPersonne {
+
+	public static void main(String[] args) {
+		Personne p1 = new Personne("Jean","III",02,10,1541,2,"riche","20200","Bastia");
+		System.out.println(p1);
+
+	}
+
+}

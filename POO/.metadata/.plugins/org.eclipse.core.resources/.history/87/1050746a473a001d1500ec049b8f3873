@@ -1,0 +1,17 @@
+package ex1;
+import java.util.*;
+
+public class Employe extends Personne {
+	protected double salaire;
+	protected final GregorianCalendar DATEEMBAUCHE;
+	
+	
+	
+	private Employe(String leNom,String lePrenom, GregorianCalendar laDate, Adresse lAdresse,double salaire) {
+		super(leNom,lePrenom,laDate,lAdresse);
+		this.salaire = salaire;
+		this.DATEEMBAUCHE = new GregorianCalendar();
+		
+	}
+
+}
